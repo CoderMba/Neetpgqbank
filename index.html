@@ -368,5 +368,17 @@
    
 
 </script>
+  <script>
+fetch('https://backend-fwe2.onrender.com'){
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    page: window.location.pathname,
+    time: new Date().toISOString()
+  })
+});
+</script>
+
+
 </body>
 </html>
