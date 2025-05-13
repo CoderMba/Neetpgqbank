@@ -10,6 +10,16 @@
 
   gtag('config', 'G-4D1DHVQMLT');
 </script>
+<script>
+fetch('https://backend-fwe2.onrender.com/log'){
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    page: window.location.pathname,
+    time: new Date().toISOString()
+  })
+});
+</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <title>NEET PG Quiz App</title>
@@ -368,16 +378,7 @@
    
 
 </script>
-  <script>
-fetch('https://backend-fwe2.onrender.com/log'){
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-    page: window.location.pathname,
-    time: new Date().toISOString()
-  })
-});
-</script>
+
 
 
 </body>
